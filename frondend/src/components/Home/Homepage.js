@@ -1,14 +1,14 @@
 import Header from "../header/header.js";
-const Dashboard =() =>{
+const Homepage =() =>{
     return (
         <>
             <Header />
             <div>
-                test login
+                Homepage
             </div>
         </>
     
       );
 }
 
-export default Dashboard;
+export default Homepage;
