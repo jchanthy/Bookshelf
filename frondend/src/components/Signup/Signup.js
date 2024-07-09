@@ -4,46 +4,48 @@ const Signup =() =>{
     return (
         <>
             {/* <Header /> */}
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero bg-base-250 min-h-screen">
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
-                  <h1 className="text-5xl font-bold">Sign Up now!</h1>
+                <h1 className="text-4xl font-bold">Study Smart</h1>
                   <p className="py-6">
-                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                    quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    <b>Read anytime, anywhere.</b>
                   </p>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-130 w-full max-w-sm shrink-0 shadow-2xl">
                   <form className="card-body">
                     <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">Email</span>
-                      </label>
-                      <input type="email" placeholder="email" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">Password</span>
-                      </label>
-                      <input type="password" placeholder="password" className="input input-bordered" required />
-        
-                    </div>
-
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">Confirm Password</span>
-                      </label>
-                      <input type="password" placeholder="password" className="input input-bordered" required />
-                      <label className="label">
-                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                      </label>
-                    </div>
-
-
-                    <div className="form-control mt-6">
-                      <button className="btn btn-primary">Sign Up</button>
-                      <Link to="/login" className="link link-hover">Login</Link>
-                    
+                    <h className="text-3xl font-bold">Bookshelf</h>
+                    <h className="text-2xl font-bold">Create Account</h>
+                    <h className="text-1xl font-bold">Already have a Bookshelf Account? <Link to="/Signin" className="link link-hover">Sign in</Link></h>
+                        <label className="label">
+                        <span className="label-text">First Name</span>
+                        </label>
+                        <input type="email" placeholder="sichanbookshelf" className="input input-bordered" required />
+                        <label className="label">
+                        <span className="label-text">Last Name</span>
+                        </label>
+                        <input type="email" placeholder="Vai" className="input input-bordered" required />
+                        <label className="label">
+                        <span className="label-text">Email Address</span>
+                        </label>
+                        <input type="email" placeholder="sichanbookshelf@gmail.com" className="input input-bordered" required />
+                      </div>
+                        <div className="form-control">
+                          <label className="label">
+                          <span className="label-text">Password</span>
+                          </label>
+                            <input type="password" placeholder="Newpassword" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                          <label className="label">
+                          <span className="label-text">Confirm Password</span>
+                          </label>
+                          <input type="password" placeholder="Confirm password" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control mt-6">
+                        <button className="btn btn-primary">Sign Up Account</button>
+                        <Link to="/Signin" className="link link-hover">Sign in</Link>
                     </div>
                   </form>
                 </div>

@@ -1,25 +1,27 @@
 import Header from "../header/header.js";
 import { Link } from "react-router-dom";
-const Login =() =>{
+const Signin =() =>{
     return (
         <>
             {/* <Header /> */}
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero bg-base-250 min-h-screen">
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
-                  <h1 className="text-5xl font-bold">Login now!</h1>
+                  <h1 className="text-4xl font-bold">Study Smart</h1>
                   <p className="py-6">
-                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                    quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    <b>Read anytime, anywhere.</b>
                   </p>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-130 w-full max-w-sm shrink-0 shadow-2xl">
                   <form className="card-body">
                     <div className="form-control">
+                    <h className="text-3xl font-bold">Bookshelf</h>
+                    <h className="text-2xl font-bold">Sign In</h>
+                    <h className="text-1xl font-bold">New here? Create a Bookshelf Account</h>
                       <label className="label">
                         <span className="label-text">Email</span>
                       </label>
-                      <input type="email" placeholder="email" className="input input-bordered" required />
+                      <input type="email" placeholder="sichan@bookshelf.com" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                       <label className="label">
@@ -27,20 +29,21 @@ const Login =() =>{
                       </label>
                       <input type="password" placeholder="password" className="input input-bordered" required />
                       <label className="label">
-                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                        
+                        <Link to="/Forgotpassword" className="link link-hover">Forgot Password</Link>
                       </label>
                     </div>
                     <div className="form-control mt-6">
-                      <button className="btn btn-primary">Login</button>
-                      <Link to="/signup" className="link link-hover">Sign Up</Link>
+                      <button className="btn btn-primary">Sign in</button>
+                      <p>-------or continue with--------</p>
+                      <button className="btn btn-wide">Google</button>
+                      <Link to="/Signup" className="link link-hover">Sign Up</Link>
                     </div>
                   </form>
                 </div>
               </div>
             </div>
         </>
-    
       );
 }
-
-export default Login;
+export default Signin;
