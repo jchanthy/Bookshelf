@@ -1,25 +1,28 @@
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
-import Signin from './components/Signin/Signin.js';
-import Signup from './components/Signup/Signup.js';
-import Homepage from './components/Home/Homepage.js';
+import Signin from './auth/Signin/Signin.js';
+import Signup from './auth/Signup/Signup.js';
 import Dashboard from './components/Dashboard/Dashboard.js';
-import Forgotpassword from './components/Forgotpassword/Forgotpassword.js';
+import Forgotpassword from './auth/Forgotpassword/Forgotpassword.js';
+// import Header  from './components/header/header.js'
+import Testing from './components/testing.js'
+import Layout from './components/layout.js';
+import NoHeader from './components/noheader.js';
 
 function App() {
   return (
     <>
-    <BrowserRouter>
+
+<BrowserRouter>
       <Routes>
-          <Route path='/' element ={<Homepage />} />
-          <Route path="/Signin" element={<Signin />}/>
-          <Route path="/signup" element={<Signup />}/>
-          <Route path="/dashboard" element={<Dashboard />}/>
-          <Route path='/Forgotpassword' element ={<Forgotpassword/>}/>
+        <Route path="/" element={<Layout><Dashboard /></Layout>} />
+        <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+        <Route path="/signin" element={<NoHeader><Signin /></NoHeader>} />
+        <Route path="/signup" element={<NoHeader><Signup /></NoHeader>} />
+        <Route path="/forgotpassword" element={<NoHeader><Forgotpassword /></NoHeader>} />
       </Routes>
     </BrowserRouter>
-
     </>
   );
 }

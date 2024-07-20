@@ -1,4 +1,4 @@
-import Header from "../header/header.js";
+import Header from "../../components/header/header.js";
 import { Link } from "react-router-dom";
 const Signup =() =>{
     return (
@@ -45,7 +45,7 @@ const Signup =() =>{
                         </div>
                         <div className="form-control mt-6">
                         <button className="btn btn-primary">Sign Up Account</button>
-                        <Link to="/Signin" className="link link-hover">Sign in</Link>
+                        <Link to="/signin" className="link link-hover">Sign in</Link>
                     </div>
                   </form>
                 </div>

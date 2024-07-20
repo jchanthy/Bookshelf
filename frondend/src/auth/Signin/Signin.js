@@ -1,4 +1,4 @@
-import Header from "../header/header.js";
+import Header from "../../components/header/header.js";
 import { Link } from "react-router-dom";
 const Signin =() =>{
     return (
@@ -6,13 +6,8 @@ const Signin =() =>{
             {/* <Header /> */}
             <div className="hero bg-base-250 min-h-screen">
               <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
-                  <h1 className="text-4xl font-bold">Study Smart</h1>
-                  <p className="py-6">
-                    <b>Read anytime, anywhere.</b>
-                  </p>
-                </div>
-                <div className="card bg-base-130 w-full max-w-sm shrink-0 shadow-2xl">
+                
+                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                   <form className="card-body">
                     <div className="form-control">
                     <h className="text-3xl font-bold">Bookshelf</h>
@@ -34,13 +29,21 @@ const Signin =() =>{
                       </label>
                     </div>
                     <div className="form-control mt-6">
-                      <button className="btn btn-primary">Sign in</button>
+                      <button className="btn btn-primary"> <Link to="/Dashboard" className="link link-hover">Sign in</Link></button>
                       <p>-------or continue with--------</p>
                       <button className="btn btn-wide">Google</button>
                       <Link to="/Signup" className="link link-hover">Sign Up</Link>
                     </div>
                   </form>
                 </div>
+
+                <div className="text-left ">
+                  <h1 className="text-4xl font-bold">Study Smart</h1>
+                  <p className="py-12">
+                    <b>Read anytime, anywhere.</b>
+                  </p>
+                </div>
+
               </div>
             </div>
         </>

@@ -1,4 +1,4 @@
-import Header from "../header/header.js";
+import Header from "../../components/header/header.js";
 import { Link } from "react-router-dom";
 const Forgotpassword =() =>{
     return (
