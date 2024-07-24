@@ -1,119 +1,224 @@
+import { useEffect, useState } from "react";
+import {Link } from "react-router-dom";
+
 
 const Dashboard =() =>{
     return (
         <>
      
-        <div>Search my bookshelf</div>
-        <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+        <div className="text-2xl font-bold">
+          Search my bookshelf
+        </div>
+        <input type="text" placeholder="Search ..." className="input input-bordered w-full max-w-xs" />
              <div className="overflow-x-auto w-full">
-        <table className="table w-96">
+        <table className="table w-full">
           {/* head */}
           <thead>
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <th>B_Code</th>
-              <th>Title</th>
-              <th>Author</th>
+            <tr className="text-1xl font-bold">
+              <th>Book_Code</th>
+              <th>Book_Title</th>
+              <th>Author_By</th>
               <th>Average Rating</th>
               <th>Thumbnail</th>
+              <th> Updated Status</th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <td>Purple</td>
-              <td>Purple</td>
-              <td><span className="badge badge-ghost badge-sm">Desktop </span></td>
-              <td><span className="badge badge-ghost badge-sm">High </span></td>
+              <td>B_001</td>
+              <td>The Arts of Teaching Children</td>
+              <td><span className="badge badge-ghost badge-sm">Khun Jonh </span></td>
+              <td>
+                  <span className="badge badge-ghost badge-sm">High </span>
+                  <br/>
+                  <span className=""> 
+                      <div className="rating">
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          className="mask mask-star-2 bg-orange-400"
+                          defaultChecked />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                      </div>
+                  </span>
+              </td>
               <td>
                 <div className="flex items-center gap-3">
                   <div className="avatar">
-                    <div className="mask mask-squircle h-12 w-12">
+                    <div className="h-24 w-24">
+                      <Link to={'/currentreading'}>
                       <img role="button" 
-                        src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                        src="https://images-na.ssl-images-amazon.com/images/I/51r6XIPWmoL._SX331_BO1,204,203,200_.jpg"
                         alt="Avatar Tailwind CSS Component" />
+                        </Link>
                     </div>
                   </div>
                 </div>
               </td>
+              <td>
+                    <p>Want to Read</p>
+                </td>
             </tr>
             {/* row 2 */}
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <td>Purple</td>
-              <td>Purple</td>
-              <td><span className="badge badge-ghost badge-sm">Desktop </span></td>
-              <td><span className="badge badge-ghost badge-sm">High </span></td>
+              <tr>
+              <td>B_002</td>
+              <td>The Hobbit</td>
+              <td><span className="badge badge-ghost badge-sm">Irannor Jonh </span></td>
+              <td>
+                  <span className="badge badge-ghost badge-sm">High </span>
+                  <br/>
+                  <span className=""> 
+                      <div className="rating">
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          className="mask mask-star-2 bg-orange-400"
+                          defaultChecked />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                      </div>
+                  </span>
+              </td>
               <td>
                 <div className="flex items-center gap-3">
                   <div className="avatar">
-                    <div className="mask mask-squircle h-12 w-12">
+                    <div className="h-24 w-24">
+                      <Link to={'/currentreading'}>
                       <img role="button" 
-                        src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                        src="https://images-na.ssl-images-amazon.com/images/I/61VxEKq8B1L._SX365_BO1,204,203,200_.jpg"
                         alt="Avatar Tailwind CSS Component" />
+                        </Link>
                     </div>
                   </div>
                 </div>
               </td>
+              <td>
+                    <p>current reading</p>
+                </td>
             </tr>
             {/* row 3 */}
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <td>Purple</td>
-              <td>Purple</td>
-              <td><span className="badge badge-ghost badge-sm">Desktop </span></td>
-              <td><span className="badge badge-ghost badge-sm">High </span></td>
+              <tr>
+              <td>B_003</td>
+              <td>Harry Potter and the Prisoner of Azkaban</td>
+              <td><span className="badge badge-ghost badge-sm">J. K. Rowling </span></td>
+              <td>
+                  <span className="badge badge-ghost badge-sm">High </span>
+                  <br/>
+                  <span className=""> 
+                      <div className="rating">
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          className="mask mask-star-2 bg-orange-400"
+                          defaultChecked />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                      </div>
+                  </span>
+              </td>
               <td>
                 <div className="flex items-center gap-3">
                   <div className="avatar">
-                    <div className="mask mask-squircle h-12 w-12">
+                    <div className="h-24 w-24">
+                      <Link to={'/currentreading'}>
                       <img role="button" 
-                        src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                        src="https://images-na.ssl-images-amazon.com/images/I/51IiQ4r35LL._SX345_BO1,204,203,200_.jpg"
                         alt="Avatar Tailwind CSS Component" />
+                        </Link>
                     </div>
                   </div>
                 </div>
               </td>
+              <td>
+                    <p>Read</p>
+                </td>
             </tr>
             {/* row 4 */}
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <td>Purple</td>
-              <td>Purple</td>
-              <td><span className="badge badge-ghost badge-sm">Desktop </span></td>
-              <td><span className="badge badge-ghost badge-sm">High </span></td>
+              <tr>
+              <td>B_004</td>
+              <td>Harry Potter and the Half-Blood Prince</td>
+              <td><span className="badge badge-ghost badge-sm">Scholastic </span></td>
+              <td>
+                  <span className="badge badge-ghost badge-sm">High </span>
+                  <br/>
+                  <span className=""> 
+                      <div className="rating">
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          className="mask mask-star-2 bg-orange-400"
+                          defaultChecked />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                      </div>
+                  </span>
+              </td>
               <td>
                 <div className="flex items-center gap-3">
                   <div className="avatar">
-                    <div className="mask mask-squircle h-12 w-12">
+                    <div className="h-24 w-24">
+                      <Link to={'/currentreading'}>
                       <img role="button" 
-                        src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                        src="https://images-na.ssl-images-amazon.com/images/I/51KV4CXARLL._SX342_BO1,204,203,200_.jpg"
                         alt="Avatar Tailwind CSS Component" />
+                        </Link>
                     </div>
                   </div>
                 </div>
               </td>
+              <td>
+                    <p>Want to Read</p>
+                </td>
+            </tr>
+
+             {/* row 5 */}
+              <tr>
+              <td>B_005</td>
+              <td>A Bear Called Paddington</td>
+              <td><span className="badge badge-ghost badge-sm">Michael Bond </span></td>
+              <td>
+                  <span className="badge badge-ghost badge-sm">High </span>
+                  <br/>
+                  <span className=""> 
+                      <div className="rating">
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          className="mask mask-star-2 bg-orange-400"
+                          defaultChecked />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                      </div>
+                  </span>
+              </td>
+              <td>
+                <div className="flex items-center gap-3">
+                  <div className="avatar">
+                    <div className="h-24 w-24">
+                      <Link to={'/currentreading'}>
+                      <img role="button" 
+                        src="https://images-na.ssl-images-amazon.com/images/I/51clgmTURAL._SX321_BO1,204,203,200_.jpg"
+                        alt="Avatar Tailwind CSS Component" />
+                        </Link>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                    <p>Want to Read</p>
+                </td>
             </tr>
             </tbody>
           {/* foot */}

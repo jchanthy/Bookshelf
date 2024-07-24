@@ -9,8 +9,8 @@ const Signin =() =>{
                 
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                   <form className="card-body">
-                    <div className="form-control">
-                    <h className="text-3xl font-bold">Bookshelf</h>
+                    <div className="form-control  text-center"> 
+                    <h className="text-2xl font-bold">Bookshelf</h>
                     <h className="text-2xl font-bold">Sign In</h>
                     <h className="text-1xl font-bold">New here? Create a Bookshelf Account</h>
                       <label className="label">
@@ -24,19 +24,16 @@ const Signin =() =>{
                       </label>
                       <input type="password" placeholder="password" className="input input-bordered" required />
                       <label className="label">
-                        
                         <Link to="/Forgotpassword" className="link link-hover">Forgot Password</Link>
                       </label>
-                    </div>
-                    <div className="form-control mt-6">
+                    <div className="form-control  text-center"> 
                       <button className="btn btn-primary"> <Link to="/Dashboard" className="link link-hover">Sign in</Link></button>
                       <p>-------or continue with--------</p>
-                      <button className="btn btn-wide">Google</button>
-                      <Link to="/Signup" className="link link-hover">Sign Up</Link>
+                      <button className="btn btn-wide "><Link to="/gmail.com" className="link link-hover">Google</Link></button>
+                      </div>
                     </div>
                   </form>
                 </div>
-
                 <div className="text-left ">
                   <h1 className="text-4xl font-bold">Study Smart</h1>
                   <p className="py-12">

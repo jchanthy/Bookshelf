@@ -8,9 +8,9 @@ const Layout = ({ children }) => {
   return (
     <>
     
-    <div className=' flex flex-row  justify-stat grow w-full'>
+    <div className=' flex flex-row'>
  <Header />
-      <main>{children}</main>
+      <main className='flex-1 overflow-y-auto w-full p-4'>{children}</main>
       </div>
 
     </>
