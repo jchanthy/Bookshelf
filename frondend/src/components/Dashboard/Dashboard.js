@@ -5,12 +5,11 @@ import {Link } from "react-router-dom";
 const Dashboard =() =>{
     return (
         <>
-     
         <div className="text-2xl font-bold">
           Search my bookshelf
         </div>
         <input type="text" placeholder="Search ..." className="input input-bordered w-full max-w-xs" />
-             <div className="overflow-x-auto w-full">
+            <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
           <thead>
@@ -50,7 +49,7 @@ const Dashboard =() =>{
                 <div className="flex items-center gap-3">
                   <div className="avatar">
                     <div className="h-24 w-24">
-                      <Link to={'/currentreading'}>
+                      <Link to={'/bookdetail'}>
                       <img role="button" 
                         src="https://images-na.ssl-images-amazon.com/images/I/51r6XIPWmoL._SX331_BO1,204,203,200_.jpg"
                         alt="Avatar Tailwind CSS Component" />
@@ -60,14 +59,15 @@ const Dashboard =() =>{
                 </div>
               </td>
               <td>
-                    <p>Want to Read</p>
+                    <p style={{ color: 'blue' }}>Want to Read</p>
+
                 </td>
             </tr>
             {/* row 2 */}
               <tr>
               <td>B_002</td>
               <td>The Hobbit</td>
-              <td><span className="badge badge-ghost badge-sm">Irannor Jonh </span></td>
+              <td><span className="badge badge-ghost badge-sm">Irannor </span></td>
               <td>
                   <span className="badge badge-ghost badge-sm">High </span>
                   <br/>
@@ -89,7 +89,7 @@ const Dashboard =() =>{
                 <div className="flex items-center gap-3">
                   <div className="avatar">
                     <div className="h-24 w-24">
-                      <Link to={'/currentreading'}>
+                      <Link to={'/bookdetail'}>
                       <img role="button" 
                         src="https://images-na.ssl-images-amazon.com/images/I/61VxEKq8B1L._SX365_BO1,204,203,200_.jpg"
                         alt="Avatar Tailwind CSS Component" />
@@ -99,14 +99,14 @@ const Dashboard =() =>{
                 </div>
               </td>
               <td>
-                    <p>current reading</p>
+                    <p style={{ color: 'green' }}>current Reading</p>
                 </td>
             </tr>
             {/* row 3 */}
               <tr>
               <td>B_003</td>
               <td>Harry Potter and the Prisoner of Azkaban</td>
-              <td><span className="badge badge-ghost badge-sm">J. K. Rowling </span></td>
+              <td><span className="badge badge-ghost badge-sm">J. K. Row </span></td>
               <td>
                   <span className="badge badge-ghost badge-sm">High </span>
                   <br/>
@@ -128,7 +128,7 @@ const Dashboard =() =>{
                 <div className="flex items-center gap-3">
                   <div className="avatar">
                     <div className="h-24 w-24">
-                      <Link to={'/currentreading'}>
+                      <Link to={'/bookdetail'}>
                       <img role="button" 
                         src="https://images-na.ssl-images-amazon.com/images/I/51IiQ4r35LL._SX345_BO1,204,203,200_.jpg"
                         alt="Avatar Tailwind CSS Component" />
@@ -138,7 +138,8 @@ const Dashboard =() =>{
                 </div>
               </td>
               <td>
-                    <p>Read</p>
+                    <p style={{ color: 'red' }}>Read</p>
+
                 </td>
             </tr>
             {/* row 4 */}
@@ -167,7 +168,7 @@ const Dashboard =() =>{
                 <div className="flex items-center gap-3">
                   <div className="avatar">
                     <div className="h-24 w-24">
-                      <Link to={'/currentreading'}>
+                      <Link to={'/bookdetail'}>
                       <img role="button" 
                         src="https://images-na.ssl-images-amazon.com/images/I/51KV4CXARLL._SX342_BO1,204,203,200_.jpg"
                         alt="Avatar Tailwind CSS Component" />
@@ -177,15 +178,15 @@ const Dashboard =() =>{
                 </div>
               </td>
               <td>
-                    <p>Want to Read</p>
+                    <p style={{ color: 'blue' }}>Want to Read</p>
+
                 </td>
             </tr>
-
              {/* row 5 */}
               <tr>
               <td>B_005</td>
               <td>A Bear Called Paddington</td>
-              <td><span className="badge badge-ghost badge-sm">Michael Bond </span></td>
+              <td><span className="badge badge-ghost badge-sm">Michael </span></td>
               <td>
                   <span className="badge badge-ghost badge-sm">High </span>
                   <br/>
@@ -207,7 +208,7 @@ const Dashboard =() =>{
                 <div className="flex items-center gap-3">
                   <div className="avatar">
                     <div className="h-24 w-24">
-                      <Link to={'/currentreading'}>
+                      <Link to={'/bookdetail'}>
                       <img role="button" 
                         src="https://images-na.ssl-images-amazon.com/images/I/51clgmTURAL._SX321_BO1,204,203,200_.jpg"
                         alt="Avatar Tailwind CSS Component" />
@@ -217,7 +218,85 @@ const Dashboard =() =>{
                 </div>
               </td>
               <td>
-                    <p>Want to Read</p>
+                    <p style={{ color: 'blue' }}>Want to Read</p>
+                </td>
+            </tr>
+             {/* row 6 */}
+              <tr>
+              <td>B_006</td>
+              <td>The Hobbit</td>
+              <td><span className="badge badge-ghost badge-sm">Irannor </span></td>
+              <td>
+                  <span className="badge badge-ghost badge-sm">High </span>
+                  <br/>
+                  <span className=""> 
+                      <div className="rating">
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          className="mask mask-star-2 bg-orange-400"
+                          defaultChecked />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                      </div>
+                  </span>
+              </td>
+              <td>
+                <div className="flex items-center gap-3">
+                  <div className="avatar">
+                    <div className="h-24 w-24">
+                      <Link to={'/bookdetail'}>
+                      <img role="button" 
+                        src="https://images-na.ssl-images-amazon.com/images/I/61VxEKq8B1L._SX365_BO1,204,203,200_.jpg"
+                        alt="Avatar Tailwind CSS Component" />
+                        </Link>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                    <p></p>
+                </td>
+            </tr>
+             {/* row 7 */}
+              <tr>
+              <td>B_007</td>
+              <td>The Hobbit</td>
+              <td><span className="badge badge-ghost badge-sm">Irannor  </span></td>
+              <td>
+                  <span className="badge badge-ghost badge-sm">High </span>
+                  <br/>
+                  <span className=""> 
+                      <div className="rating">
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          className="mask mask-star-2 bg-orange-400"
+                          defaultChecked />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                      </div>
+                  </span>
+              </td>
+              <td>
+                <div className="flex items-center gap-3">
+                  <div className="avatar">
+                    <div className="h-24 w-24">
+                      <Link to={'/bookdetail'}>
+                      <img role="button" 
+                        src="https://images-na.ssl-images-amazon.com/images/I/61VxEKq8B1L._SX365_BO1,204,203,200_.jpg"
+                        alt="Avatar Tailwind CSS Component" />
+                        </Link>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                    <p></p>
                 </td>
             </tr>
             </tbody>

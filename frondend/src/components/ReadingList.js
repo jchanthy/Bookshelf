@@ -19,7 +19,7 @@ const ReadingList =() =>{
             <p>By : By Irannor Jonh</p>
             <p>Test Your book details can be found in the Book details tab. Book details are sometimes called metadata. Both terms describe what will show your book's Amazon detail page. As most of these fields cannot be changed after you publish, we recommend you double check everything before submitting.</p>
             <div className="card-actions ">
-        <button className="btn btn-primary">Mark to read</button>
+        <button className="btn btn-primary"><Link to="/CurrentReading" className="link link-hover">Mark to read</Link></button>
     </div>
   </div>
 </div>

@@ -6,13 +6,11 @@ const Signin =() =>{
             {/* <Header /> */}
             <div className="hero bg-base-250 min-h-screen">
               <div className="hero-content flex-col lg:flex-row-reverse">
-                
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                   <form className="card-body">
                     <div className="form-control  text-center"> 
-                    <h className="text-2xl font-bold">Bookshelf</h>
                     <h className="text-2xl font-bold">Sign In</h>
-                    <h className="text-1xl font-bold">New here? Create a Bookshelf Account</h>
+                    <h className="text-1xl font-bold">To Bookshelf or  <Link to="/signup" className="link link-hover">Create Account</Link></h>
                       <label className="label">
                         <span className="label-text">Email</span>
                       </label>
@@ -29,7 +27,8 @@ const Signin =() =>{
                     <div className="form-control  text-center"> 
                       <button className="btn btn-primary"> <Link to="/Dashboard" className="link link-hover">Sign in</Link></button>
                       <p>-------or continue with--------</p>
-                      <button className="btn btn-wide "><Link to="/gmail.com" className="link link-hover">Google</Link></button>
+                      <button className="btn link-success "><Link to="/gmail.com" className="link link-hover">Gmail Account</Link></button>
+                      
                       </div>
                     </div>
                   </form>

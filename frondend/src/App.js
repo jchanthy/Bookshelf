@@ -1,7 +1,7 @@
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
-import Signin from './auth/Signin/Signin.js';
+import Signin from './auth/Signin/Signin.js'
 import Signup from './auth/Signup/Signup.js';
 import Dashboard from './components/Dashboard/Dashboard.js';
 import Forgotpassword from './auth/Forgotpassword/Forgotpassword.js';
@@ -12,7 +12,10 @@ import NoHeader from './components/noheader.js';
 
 import BookDetail from './components/BookDetails.js';
 import ReadingList from './components/ReadingList.js'
-import LayoutSocialCards from './pages/SocialCards/LayoutSocialCard.js';
+import ReadingList1 from './components/ReadingList1.js';
+import SocialCards from './components/SocialCards.js';
+import AlreadyRead from './components/AlreadyRead.js';
+import Ebook from './components/ebook/Ebook.js';
 
 function App() {
   return (
@@ -20,10 +23,14 @@ function App() {
 
 <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout><Dashboard /></Layout>} />
+        <Route path="/" element={<Signin /> } />
         <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+        <Route path="/bookdetail" element={<Layout><BookDetail /></Layout>} />
         <Route path="/currentreading" element={<Layout><ReadingList /></Layout>}/>
-        <Route path='/current-reading' element={<Layout><LayoutSocialCards /></Layout>} />
+        <Route path='/current-reading' element={<Layout><ReadingList1 /></Layout>} />
+        <Route path='/socialcards' element={<Layout><SocialCards /></Layout>} />
+        <Route path='/ebook' element={<Layout><Ebook /></Layout>} />
+        <Route path='/already-read' element={<Layout><AlreadyRead /></Layout>} />
         <Route path="/signin" element={<NoHeader><Signin /></NoHeader>} />
         <Route path="/signup" element={<NoHeader><Signup /></NoHeader>} />
         <Route path="/forgotpassword" element={<NoHeader><Forgotpassword /></NoHeader>} />

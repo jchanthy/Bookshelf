@@ -20,7 +20,7 @@ const verify = (token) =>
 
 export const signUpAdmin = async ({ name, email, password }) => {
   try {
-    await User.create({ name, email, password, isAdmin: true });
+    await User.create({ name, email, password });
     return Promise.resolve();
   } catch (error) {
     return Promise.reject({ error });
