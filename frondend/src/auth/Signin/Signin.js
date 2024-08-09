@@ -1,6 +1,8 @@
 import Header from "../../components/header/header.js";
 import { Link } from "react-router-dom";
 const Signin =() =>{
+
+
     return (
         <>
             {/* <Header /> */}
@@ -10,7 +12,7 @@ const Signin =() =>{
                   <form className="card-body">
                     <div className="form-control  text-center"> 
                     <h className="text-2xl font-bold">Sign In</h>
-                    <h className="text-1xl font-bold">To Bookshelf or  <Link to="/signup" className="link link-hover">Create Account</Link></h>
+                    <h className="text-1xl font-bold">Or  <Link to="/signup" className="link link-hover"><p style={{ color: 'blue' }} >Create Account</p></Link></h>
                       <label className="label">
                         <span className="label-text">Email</span>
                       </label>
@@ -22,13 +24,12 @@ const Signin =() =>{
                       </label>
                       <input type="password" placeholder="password" className="input input-bordered" required />
                       <label className="label">
-                        <Link to="/Forgotpassword" className="link link-hover">Forgot Password</Link>
+                        <Link to="/Forgotpassword" className="link link-hover"><p style={{ color: 'blue' }} >Forget Password</p></Link>
                       </label>
                     <div className="form-control  text-center"> 
                       <button className="btn btn-primary"> <Link to="/Dashboard" className="link link-hover">Sign in</Link></button>
-                      <p>-------or continue with--------</p>
-                      <button className="btn link-success "><Link to="/gmail.com" className="link link-hover">Gmail Account</Link></button>
-                      
+                      {/* <p>-------or continue with--------</p>
+                      <button className="btn link-success "><Link to="/gmail.com" className="link link-hover">Gmail Account</Link></button> */}
                       </div>
                     </div>
                   </form>

@@ -6,7 +6,7 @@ const Header =() =>{
   <li>
     <h2 className="menu-title">Bookshelf</h2>
     <ul>
-    <li><Link to='/'>Dashborad</Link></li>
+    <li><Link to='/Dashboard'>Dashboard</Link></li>
     <li><Link to='/current-reading'>Reading List</Link></li>
     <li><Link to='/already-read'>Already Read</Link></li>
     </ul>

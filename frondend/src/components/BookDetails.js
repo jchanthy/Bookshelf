@@ -28,7 +28,7 @@ const BookDetail = () => {
       </div>
      <div>
       <ul className="menu menu-vertical sm:menu-horizontal">
-            <li><Link to={'/'}>View aLL books</Link></li>
+            <li><Link to={'/Dashboard'}>View aLL books</Link></li>
             
             <li><a>Remove</a></li>
         </ul>
