@@ -1,9 +1,9 @@
 import User from '../../models/user.js';
+import bcrypt from "bcrypt";
 const signUpUser = async (req, res) => {
+
 const { name, email, password } = req.body;
-console.log(name);
   try {
-    
 
     // Check if the user already exists with the provided email
     const existingUser = await User.findOne({ email });
@@ -12,14 +12,16 @@ console.log(name);
       return res.status(400).json({ message: 'User already exists with this email' });
     }
 
-  //   // Hash the user's password and security answer
-  //   const hashedPassword = await bcrypt.hash(password, 10);
 
-  //   // Create a new user
+
+    // Hash the user's password and security answer
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Create a new user
     const user = new User({
       name,
       email,
-      password,
+      password: hashedPassword
     });
 
   //   // Save the user to the database

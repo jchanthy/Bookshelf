@@ -41,7 +41,7 @@ const Signup =({ name, email, password }) =>{
       };
 
       // Send the signup request to the server with all user data
-      const response = await axios.post('http://localhost:8000/api/signup', userData);
+      const response = await axios.post('/api/signup', userData);
 
 
       console.log(response.data);

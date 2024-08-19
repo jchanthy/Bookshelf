@@ -1,6 +1,7 @@
-import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
+const { Schema, model } = mongoose;
 const userSchema = new Schema({
   name: {
     type: String,
@@ -27,7 +28,7 @@ userSchema.pre("save", function (next) {
   if (!this.isModified("password")) {
     return next();
   }
-  this.password = bcrypt.hashSync(this.password, 10);
+  this.password = bcrypt.hash(this.password, 10);
   next();
 });
 
@@ -51,7 +52,6 @@ userSchema.method.updateLoggedIn  = function() {
     },
     {
       lastLoggedIn : new Date(),
-  
     },
   );
 };

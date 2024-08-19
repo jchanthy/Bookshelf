@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
+import {themeChange} from "theme-change";
 
 // Create a context
 export const UserContext = createContext({});
@@ -11,9 +12,10 @@ export function UserContextProvider({ children }) {
 
   useEffect(() => {
     // Load the user from localStorage
-    const user = JSON.parse(localStorage.getItem('bookself-user'));
+    const user = JSON.parse(localStorage.getItem('bookshelf-user'));
     // Load the token from localStorage
-    const token = localStorage.getItem('bookself-token');
+    const token = localStorage.getItem('bookshelf-token');
+    themeChange(false);
     if (user) {
       setUser(user);
       setIsAuthenticated(true);
@@ -23,9 +25,9 @@ export function UserContextProvider({ children }) {
 
   function login(user, token) {
     // Save the user to localStorage
-    localStorage.setItem('bookself-user', JSON.stringify(user));
+    localStorage.setItem('bookshelf-user', JSON.stringify(user));
     // Save the token to localStorage
-    localStorage.setItem('bookself-token', token);
+    localStorage.setItem('bookshelf-token', token);
     // Set the user and token in state
     setUser(user);
     setIsAuthenticated(true);
@@ -34,15 +36,15 @@ export function UserContextProvider({ children }) {
 
   function updateUser(user) {
     // Save the user to localStorage
-    localStorage.setItem('bookself-user', JSON.stringify(user));
+    localStorage.setItem('bookshelf-user', JSON.stringify(user));
     // Set the user and token in state
     setUser(user);
   }
 
   function logout() {
     // Remove the user and token from localStorage
-    localStorage.removeItem('bookself-user');
-    localStorage.removeItem('bookself-token');
+    localStorage.removeItem('bookshelf-user');
+    localStorage.removeItem('bookshelf-token');
     // Remove the user and token from state
     setUser(null);
     setIsAuthenticated(false);

@@ -19,7 +19,7 @@ const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const logFile = join(__dirname, 'bookshelf.log');
 
-const PORT = process.env.DB_PORT || 6000;
+const PORT = process.env.DB_PORT;
 app.use(compression());
 app.use('/assets', express.static(join(__dirname, 'public')));
 app.use(express.static(join(__dirname, 'public', 'build')));
@@ -41,7 +41,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: {
-      secure: app.get('env') === 'production' ? true : false,
+      secure: app.get('env') === 'production',
       httpOnly: true,
       maxAge: 18000000, // 5 hours
     },

@@ -1,4 +1,3 @@
-import  {loginAdmin}  from "../../controllers/user.js";
 export default async(req, res) => {
   try{
   const { email, password } = req.body;

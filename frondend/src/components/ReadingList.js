@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
+import SearchBook from "./searchBook.js";
 
 const ReadingList =() =>{
     return (
         <>
-        <div className="text-2xl font-bold">
-          Search my bookshelf
-        </div>
-        <input type="text" placeholder="Search ..." className="input input-bordered w-full max-w-xs" />
+            <SearchBook onSearch={(query) => {
+                console.log(query);
+            }}></SearchBook>
              <div className="overflow-x-auto w-full">
              <h3 className="card-title">Current Reading</h3>
             <table className="table w-full">
@@ -16,7 +16,7 @@ const ReadingList =() =>{
                 </figure>
             <div className="card-body">
             <h2 className="card-title">Book name : The Arts of Teaching Children</h2>
-            <p>By : By Irannor Jonh</p>
+            <p>By : By Iran nor Jon</p>
             <p>Test Your book details can be found in the Book details tab. Book details are sometimes called metadata. Both terms describe what will show your book's Amazon detail page. As most of these fields cannot be changed after you publish, we recommend you double check everything before submitting.</p>
             <div className="card-actions ">
         <button className="btn btn-primary"><Link to="/CurrentReading" className="link link-hover">Mark to read</Link></button>

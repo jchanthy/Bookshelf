@@ -1,5 +1,5 @@
 const protectApi = (req, res, next) => {
-  let authorization = req.header("Authorization");
+  let authorization = req.header("authorization");
   if (authorization) {
     // verify
     console.log(authorization);

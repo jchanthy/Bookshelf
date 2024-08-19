@@ -1,4 +1,3 @@
-import { signUpAdmin } from "../../controllers/user.js";
 
 export default async (req, res) => {
     // console.log(req.body);
